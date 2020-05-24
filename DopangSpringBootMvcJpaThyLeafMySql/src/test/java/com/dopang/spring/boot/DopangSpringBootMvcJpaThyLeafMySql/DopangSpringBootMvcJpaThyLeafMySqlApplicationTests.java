@@ -9,5 +9,4 @@ class DopangSpringBootMvcJpaThyLeafMySqlApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-
 }
