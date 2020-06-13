@@ -59,6 +59,6 @@ public class ProductController {
 		productService.delete(id);
 
 		return "redirect:/index";	
-			// revert2
+			// revert
 	}
 }
