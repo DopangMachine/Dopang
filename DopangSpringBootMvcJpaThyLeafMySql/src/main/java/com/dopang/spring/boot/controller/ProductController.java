@@ -57,6 +57,8 @@ public class ProductController {
 	@RequestMapping("/delete/{id}")
 	public String deleteProduct(@PathVariable(name = "id") int id) {
 		productService.delete(id);
+		
+		//return "redirect:/index";		
 		return "redirect:/index";		
 	}
 }
