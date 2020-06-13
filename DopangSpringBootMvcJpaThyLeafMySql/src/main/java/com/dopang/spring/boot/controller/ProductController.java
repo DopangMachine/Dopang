@@ -57,8 +57,11 @@ public class ProductController {
 	@RequestMapping("/delete/{id}")
 	public String deleteProduct(@PathVariable(name = "id") int id) {
 		productService.delete(id);
-
-		return "redirect:/index";	
-			// revert
+<<<<<<< HEAD
+			
+=======
+				
+>>>>>>> parent of 7473150... Revert commit id aa7b340e1697170ac3da98661faa11e665b21fd7
+		return "redirect:/index";		
 	}
 }
