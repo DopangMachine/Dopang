@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+<title>Login page</title>
+<!-- <link th:href="@{/public/style.css}" rel="stylesheet" /> -->
+</head>
+<body>
+	<div id="container">
+		<h2>Login page</h2>
+<!-- 		<form th:action="@{/login.html}" method="post"> -->
+		<form action="#" th:action="@{/createUser}" th:object="${userDTO}" method="post">
+			<div class="imgcontainer">
+				<img th:src="@{/image/user.png}" alt="Avatar" class="avatar"/>
+			</div>
+
+			<div class="container">
+				<label for="uname"><b>Username</b></label> 
+				<input type="text" th:field="*{userName}" placeholder="Enter Username" name="uname" required> />
+				
+				<label for="psw"><b>Password</b></label> 
+				<input type="password" th:field="*{password}" placeholder="Enter Password" name="psw" required>
+				
+				<label for="role"><b>Role</b></label> 
+				<input type="text" th:field="*{role}" placeholder="Enter Username" name="uname" required> />
+
+				<button type="submit">Login</button>
+				<label> <input type="checkbox" checked="checked" name="remember"> Remember me </label>
+			</div>
+
+			<div class="container" style="background-color: #f1f1f1">
+				<button type="button" class="cancelbtn">Cancel</button>
+				<span class="psw">Forgot <a href="#">password?</a></span>
+			</div>
+		</form>
+		<p th:if="${loginError}" class="error">Wrong user or password</p>
+	</div>
+</body>
+</html>
